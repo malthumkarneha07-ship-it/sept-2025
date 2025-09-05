@@ -1,0 +1,10 @@
+def subsets(nums):
+def generate(ind,ans,curr_subsets,nums):
+    if(ind==len(nums)):
+        ans.append(curr_subsets.copy())
+        return
+    curr_subsets.append(nums[ind])
+    generate(ind,ans,curr_subsets,nums)
+    return ans
+num=list(map(int,input().split()))
+print(subsets(nums))
